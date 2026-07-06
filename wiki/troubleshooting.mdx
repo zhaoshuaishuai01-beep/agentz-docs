@@ -1,0 +1,67 @@
+---
+title: "故障排查"
+description: "常见错误与处理步骤"
+sidebarTitle: "故障排查"
+---
+
+## 助手执行失败
+
+<AccordionGroup>
+  <Accordion title="报错：Model rate limit exceeded" icon="triangle-exclamation">
+    **原因**：底层模型 QPS 超限。\
+    **处理**：
+
+    1. 打开 [模型路由](/guides/model-routing)，配置备用模型
+    2. 在 [失败重试策略](/guides/retry-strategy) 中开启指数退避
+  </Accordion>
+
+  <Accordion title="报错：Skill timeout" icon="clock">
+    **原因**：技能执行超过默认 60s 上限。\
+    **处理**：拆分为多个子技能，或在 `skill.yaml` 中调高 `timeout`。
+  </Accordion>
+
+  <Accordion title="报错：MCP tool unauthorized" icon="lock">
+    **原因**：当前用户没有该 MCP 工具的执行权限。\
+    **处理**：在 [MCP 权限管控](/guides/mcp-permissions) 中授权。
+  </Accordion>
+</AccordionGroup>
+
+## 定时任务
+
+<AccordionGroup>
+  <Accordion title="定时任务未按时触发" icon="calendar-xmark">
+    **排查步骤**：
+
+    - 检查任务是否处于**启用**状态
+    - 确认 Cron 表达式的时区是否与预期一致
+    - 查看 [运行监控](/guides/monitoring) 中最近的执行记录
+  </Accordion>
+
+  <Accordion title="任务重复触发" icon="copy">
+    **原因**：多个团队空间部署了同一任务。\
+    **处理**：只在一个空间保留启用，其他置为草稿。
+  </Accordion>
+</AccordionGroup>
+
+## API 集成
+
+<AccordionGroup>
+  <Accordion title="401 Unauthorized" icon="key">
+    检查 API Key 是否过期，参见 [认证](/developers/authentication)。
+  </Accordion>
+
+  <Accordion title="429 Too Many Requests" icon="gauge-high">
+    达到组织 QPS 限制。可以：
+
+    - 客户端加指数退避
+    - 联系管理员提升配额
+  </Accordion>
+</AccordionGroup>
+
+## 联系支持
+
+以上都没解决？带上以下信息联系我们：
+
+- 助手 ID 或任务 ID
+- 出错时间（精确到分钟，含时区）
+- 完整错误信息截图

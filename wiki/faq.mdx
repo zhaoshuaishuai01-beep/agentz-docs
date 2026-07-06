@@ -1,0 +1,72 @@
+---
+title: "常见问题 FAQ"
+description: "AgentZ 使用过程中高频问题的统一解答"
+sidebarTitle: "常见问题"
+---
+
+<Note>
+  找不到答案？在页面右上角点击 **Copy / Ask AI**，或联系团队获取支持。
+</Note>
+
+## 账号与计费
+
+<AccordionGroup>
+  <Accordion title="AgentZ 有免费版吗？" icon="circle-question">
+    有。个人用户可免费使用基础助手与预置技能库，企业版按席位计费。
+  </Accordion>
+
+  <Accordion title="如何邀请团队成员？" icon="users">
+    进入 **设置 → 团队** 页面，输入邮箱即可发送邀请。详见 [个人与团队设置](/guides/personal-settings)。
+  </Accordion>
+
+  <Accordion title="我的调用会消耗谁的额度？" icon="coins">
+    企业空间下的助手默认消耗组织额度，个人空间使用个人额度。可在 [模型路由](/guides/model-routing) 中配置。
+  </Accordion>
+</AccordionGroup>
+
+## 助手与技能
+
+<AccordionGroup>
+  <Accordion title="助手和 ChatGPT 有什么区别？" icon="robot">
+    ChatGPT 是通用对话工具；AgentZ 助手是**可配置、可组合、可监控**的自动化 Agent，可以调用技能、连接外部系统、按计划自动执行。
+  </Accordion>
+
+  <Accordion title="技能和 MCP 工具的区别？" icon="puzzle-piece">
+    - **技能**：由 AgentZ 托管执行的代码/脚本，粒度更细
+    - **MCP 工具**：外部系统通过 MCP 协议暴露的能力
+
+    详见 [核心概念](/core-concepts)。
+  </Accordion>
+
+  <Accordion title="能否让助手自动执行任务？" icon="clock">
+    可以。参见 [创建定时任务](/guides/create-scheduled-task)。
+  </Accordion>
+</AccordionGroup>
+
+## 安全与合规
+
+<AccordionGroup>
+  <Accordion title="AgentZ 会用我的数据训练模型吗？" icon="shield-check">
+    不会。所有企业数据仅用于当前请求上下文，不进入模型训练管道。
+  </Accordion>
+
+  <Accordion title="是否有审计日志？" icon="scroll">
+    有。所有操作会自动记录在 [审计日志](/guides/audit-log) 中，支持导出。
+  </Accordion>
+
+  <Accordion title="MCP 工具如何做权限管控？" icon="lock">
+    支持按用户、按操作、按资源三级细粒度控制。详见 [MCP 权限管控](/guides/mcp-permissions)。
+  </Accordion>
+</AccordionGroup>
+
+## 开发者
+
+<AccordionGroup>
+  <Accordion title="如何通过 API 调用助手？" icon="code">
+    参见 [API 概览](/developers/api-overview) 和 [认证](/developers/authentication)。
+  </Accordion>
+
+  <Accordion title="如何本地调试自建技能？" icon="terminal">
+    使用 [技能 SDK](/developers/skill-sdk) 提供的 CLI，支持本地热重载。
+  </Accordion>
+</AccordionGroup>

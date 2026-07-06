@@ -1,0 +1,51 @@
+---
+title: "更新日志"
+description: "AgentZ 平台版本发布与新特性记录"
+sidebarTitle: "更新日志"
+---
+
+<Update label="2026-07-01" description="v2.4">
+  ## 新增
+
+  - **模型路由 v2**：支持按 Prompt token 长度自动路由到合适模型
+  - **审计日志导出**：支持按团队/时间范围导出 CSV
+
+  ## 优化
+
+  - 助手创建向导步骤从四步精简为三步
+  - MCP 连接管理页支持多选删除
+
+  ## 修复
+
+  - 修复定时任务在 UTC 少数时区下触发遗漏的问题
+</Update>
+
+<Update label="2026-06-15" description="v2.3">
+  ## 新增
+
+  - **团队共享 v2**：支持子团队层级与角色继承
+  - **技能 SDK Python 3.12** 适配
+  - 上下文菜单支持 Copy as Markdown / Ask AI
+
+  ## 修复
+
+  - 修复大文件上传时内存占用过高的问题
+</Update>
+
+<Update label="2026-05-20" description="v2.2">
+  ## 新增
+
+  - 预置 **20\+ 企业级技能**（钉钉、飞书、Jira、Confluence 等）
+  - **失败重试策略** 开放自定义
+
+  ## Breaking Changes
+
+  - 旧版 `/v1/skills` API 下线，请升级到 `/v2`
+</Update>
+
+<Update label="2026-04-10" description="v2.1">
+  ## 新增
+
+  - **Agent Space** 上线，统一管理所有助手与监控
+  - **定时任务** 支持秒级 Cron
+</Update>

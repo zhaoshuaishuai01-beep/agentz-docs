@@ -1,0 +1,140 @@
+{
+  "theme": "mint",
+  "name": "AgentZ",
+  "colors": {
+    "primary": "#2A5BFF",
+    "light": "#00C2A8",
+    "dark": "#1846E6"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "href": "https://zhaoshuaishuai01-beep.github.io/huboAgentZcode/",
+        "label": "官网"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "免费试用",
+      "href": "https://zhaoshuaishuai01-beep.github.io/huboAgentZcode/"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/zhaoshuaishuai01-beep/huboagentzcode"
+    }
+  },
+  "seo": {
+    "indexing": "navigable"
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity"
+    ],
+    "display": "header"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "产品介绍",
+        "groups": [
+          {
+            "group": "开始使用",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "core-concepts",
+              "changelog"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "使用手册",
+        "groups": [
+          {
+            "group": "AI 助手",
+            "pages": [
+              "guides/create-assistant",
+              "guides/configure-prompt",
+              "guides/team-sharing"
+            ]
+          },
+          {
+            "group": "技能",
+            "pages": [
+              "guides/skills-overview",
+              "guides/import-skills",
+              "guides/build-custom-skill"
+            ]
+          },
+          {
+            "group": "外部工具 (MCP)",
+            "pages": [
+              "guides/mcp-connection",
+              "guides/mcp-permissions"
+            ]
+          },
+          {
+            "group": "定时任务",
+            "pages": [
+              "guides/create-scheduled-task",
+              "guides/retry-strategy"
+            ]
+          },
+          {
+            "group": "Agent Space",
+            "pages": [
+              "guides/monitoring",
+              "guides/audit-log"
+            ]
+          },
+          {
+            "group": "设置",
+            "pages": [
+              "guides/personal-settings",
+              "guides/model-routing"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "开发者",
+        "groups": [
+          {
+            "group": "开发者",
+            "pages": [
+              "developers/api-overview",
+              "developers/authentication",
+              "developers/skill-sdk"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Wiki",
+        "groups": [
+          {
+            "group": "知识库",
+            "pages": [
+              "wiki/overview",
+              "wiki/faq",
+              "wiki/best-practices",
+              "wiki/glossary",
+              "wiki/troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

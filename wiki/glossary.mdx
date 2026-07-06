@@ -1,0 +1,49 @@
+---
+title: "术语表"
+description: "AgentZ 平台内核心术语的统一定义"
+sidebarTitle: "术语表"
+---
+
+<Info>
+  按字母顺序排列。若发现术语缺失，欢迎 [反馈](https://github.com/zhaoshuaishuai01-beep/huboagentzcode/issues)。
+</Info>
+
+## A
+
+**Agent Space（智能体空间）**\
+组织内运行、监控、审计所有助手的统一工作台。
+
+**Assistant（助手）**\
+可配置、可组合的 AI Agent 实例，由 Prompt \+ 技能 \+ MCP 工具 \+ 定时任务组成。
+
+**Audit Log（审计日志）**\
+记录所有助手的操作历史，用于合规追溯。
+
+## M
+
+**MCP（Model Context Protocol）**\
+模型上下文协议，用于将外部系统能力标准化地暴露给 AI Agent。
+
+**Model Routing（模型路由）**\
+按场景/规则动态选择底层大模型的机制，用于平衡质量和成本。
+
+## P
+
+**Prompt（提示词）**\
+定义助手角色、目标和约束的自然语言指令。推荐使用三段式结构。
+
+## S
+
+**Skill（技能）**\
+托管在 AgentZ 上的可复用代码单元，由 `skill.yaml` 描述、入口脚本实现。
+
+**Skill SDK**\
+用于开发和测试自定义技能的开发者工具包。
+
+## T
+
+**Task（任务）**\
+助手一次执行的运行时实例，包含输入、输出、状态、日志。
+
+**Team Sharing（团队共享）**\
+将助手/技能开放给团队成员使用的机制，是沉淀组织知识资产的基础。
