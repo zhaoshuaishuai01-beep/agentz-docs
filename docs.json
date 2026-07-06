@@ -52,8 +52,7 @@
             "pages": [
               "introduction",
               "quickstart",
-              "core-concepts",
-              "changelog"
+              "core-concepts"
             ]
           }
         ]
@@ -127,10 +126,9 @@
             "group": "知识库",
             "pages": [
               "wiki/overview",
-              "wiki/faq",
-              "wiki/best-practices",
-              "wiki/glossary",
-              "wiki/troubleshooting"
+              "wiki/capabilities",
+              "wiki/positioning",
+              "wiki/glossary"
             ]
           }
         ]

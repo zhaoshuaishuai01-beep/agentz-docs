@@ -5,34 +5,82 @@ description: "AgentZ 知识库入口"
 mode: "wide"
 ---
 
+<Note>
+  **AgentZ 是一个企业级 AI Agent 平台**——让企业为每一个业务岗位配置一位「懂业务、会用工具、记得上下文、能自主完成多步任务」的 AI 同事。
+</Note>
+
+## 🧭 官网信息架构
+
+当前站点共 9 个页面，一级导航 6 项 \+ 3 个辅助页。
+
+| # | 页面 | 定位 | 面向对象 |
+| --- | --- | --- | --- |
+| 1 | 首页 | 品牌 \+ 价值主张 \+ 场景速览 \+ 引流试用 | 全部（管理者 / PM / 开发） |
+| 2 | 产品功能 | 产品能力矩阵、模块化能力介绍 | PM / 技术决策者 |
+| 3 | 解决方案 | 供应链 Know-How、客户供应链场景 AI 落地方案 | 业务决策者、行业客户 |
+| 4 | 使用手册 | 上手教程、最佳实践、FAQ | 试用用户、终端使用者 |
+| 5 | 服务与价格 | 售前咨询、售后 SLA、价格套餐 | 采购决策者、CIO |
+| 6 | 安全 | 数据安全、合规、私有化部署 | 法务 / 安全 / IT |
+| 7 | 联系我们 | 表单、渠道、地址 | 全部 |
+| 8 | 法律条款 | 服务协议、隐私政策、Cookie | 全部 |
+| 9 | Z 宝 | 站内 AI 助手入口 | 全部 |
+
+## ⭐ 六大核心能力
+
 <CardGroup cols={2}>
-  <Card title="常见问题 FAQ" icon="circle-question" href="/wiki/faq">
-    高频问题一站式解答
+  <Card title="1. 岗位化 Agent 编排" icon="user-tie" href="/wiki/capabilities#岗位化-agent-编排">
+    面向岗位创建专属 AI 助手，而不是通用聊天机器人
   </Card>
 
-  <Card title="最佳实践" icon="lightbulb" href="/wiki/best-practices">
-    优秀团队的使用套路
+  <Card title="2. 工具调用 & MCP 生态" icon="plug" href="/wiki/capabilities#工具调用-mcp-生态">
+    让 Agent 会「用工具」——调 API、查数据库、发消息、操作系统
   </Card>
 
-  <Card title="术语表" icon="book" href="/wiki/glossary">
-    统一团队沟通语言
+  <Card title="3. 知识库 & RAG" icon="book" href="/wiki/capabilities#知识库-rag">
+    把企业私有知识变成 Agent 的长期记忆
   </Card>
 
-  <Card title="故障排查" icon="wrench" href="/wiki/troubleshooting">
-    常见错误与处理步骤
+  <Card title="4. 长期记忆 & 上下文" icon="brain" href="/wiki/capabilities#长期记忆-上下文">
+    让 Agent 记得每一次对话、每一个用户偏好
+  </Card>
+
+  <Card title="5. 自主任务执行" icon="wand-magic-sparkles" href="/wiki/capabilities#自主任务执行">
+    从「回答问题」进化到「完成任务」
+  </Card>
+
+  <Card title="6. 企业级管控" icon="shield-halved" href="/wiki/capabilities#企业级管控">
+    让 IT / 安全 / 合规团队敢用、能管
   </Card>
 </CardGroup>
 
-## 如何使用本 Wiki
+## 🎯 差异化定位
 
-- **新人入职**：先看 [术语表](/wiki/glossary) 统一概念，再跑 [5 分钟快速上手](/quickstart)
-- **遇到问题**：先搜 [FAQ](/wiki/faq) 与 [故障排查](/wiki/troubleshooting)，未果再提 Issue
-- **团队推广**：把 [最佳实践](/wiki/best-practices) 当作培训手册下发
+<CardGroup cols={2}>
+  <Card title="vs 通用助手" icon="rocket" href="/wiki/positioning#vs-通用-llm-助手">
+    相对 ChatGPT / 通义等：AgentZ 更「岗位化 \+ 企业级」
+  </Card>
 
-## 参与贡献
+  <Card title="vs Agent 平台" icon="fire" href="/wiki/positioning#vs-agent-构建平台">
+    相对 Coze / 扣子等：AgentZ 更「面向业务岗位落地、开箱即用」
+  </Card>
 
-Wiki 内容欢迎共建：
+  <Card title="vs 开源方案" icon="lightbulb" href="/wiki/positioning#vs-开源方案">
+    相对 Dify / FastGPT：AgentZ 更「企业级管控 \+ 私有化 \+ 售后 SLA」
+  </Card>
 
-1. 在任意页面右上角点击【Copy Page】获取当前内容
-2. 在 [GitHub](https://github.com/zhaoshuaishuai01-beep/huboagentzcode) 提交 PR 或 Issue
-3. 重大变更将在 [更新日志](/changelog) 公布
+  <Card title="vs 办公套件 AI" icon="flag" href="/wiki/positioning#vs-办公套件-ai">
+    相对钉钉 / 飞书 AI 助手：AgentZ 是「独立平台、可跨 IM / 系统」
+  </Card>
+</CardGroup>
+
+## 🔗 快速跳转
+
+<CardGroup cols={2}>
+  <Card title="访问 AgentZ 官网" icon="globe" href="https://zhaoshuaishuai01-beep.github.io/huboAgentZcode/">
+    首页 · 产品功能 · 解决方案 · 使用手册 · 服务与价格 · 安全
+  </Card>
+
+  <Card title="核心术语" icon="book-open" href="/wiki/glossary">
+    Prompt 模板、RAG、MCP、Agentic Workflow 等术语定义
+  </Card>
+</CardGroup>
