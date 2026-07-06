@@ -9,8 +9,8 @@ AgentZ 提供 RESTful API，允许开发者以编程方式管理助手、触发�
 
 ## Base URL
 
-```
-https://api.agentz.dev/v1
+```text
+https://api.your-agentz-host.example.com/v1
 ```
 
 ## 认证方式
@@ -19,7 +19,7 @@ https://api.agentz.dev/v1
 
 ```bash
 curl -H "Authorization: Bearer YOUR_API_KEY" \
-     https://api.agentz.dev/v1/assistants
+     https://api.your-agentz-host.example.com/v1/assistants
 ```
 
 详见 [认证](/developers/authentication)。
@@ -27,7 +27,7 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
 ## 核心端点
 
 | 方法 | 路径 | 说明 |
-| :--- | :--- | :--- |
+| :-- | :-- | :-- |
 | GET | `/assistants` | 列出所有助手 |
 | POST | `/assistants` | 创建助手 |
 | POST | `/assistants/{id}/run` | 触发助手执行 |

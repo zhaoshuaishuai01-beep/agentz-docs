@@ -11,28 +11,28 @@ description: "获取和使用 AgentZ API Key"
 4. 复制并妥善保存（密钥只显示一次）
 
 <Warning>
-API Key 拥有你账户的完整权限，请勿在客户端代码或公开仓库中暴露。
+  API Key 拥有你账户的完整权限，请勿在客户端代码或公开仓库中暴露。
 </Warning>
 
 ## 使用方式
 
 在每个 HTTP 请求的 Header 中携带：
 
-```
+```text
 Authorization: Bearer YOUR_API_KEY
 ```
 
 ### cURL 示例
 
 ```bash
-curl -X GET https://api.agentz.dev/v1/assistants \
+curl -X GET https://api.your-agentz-host.example.com/v1/assistants \
   -H "Authorization: Bearer azk_live_xxxxxxxxxxxxxxxx"
 ```
 
 ### Node.js 示例
 
 ```javascript
-const response = await fetch('https://api.agentz.dev/v1/assistants', {
+const response = await fetch('https://api.your-agentz-host.example.com/v1/assistants', {
   headers: {
     'Authorization': 'Bearer azk_live_xxxxxxxxxxxxxxxx'
   }
