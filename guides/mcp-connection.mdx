@@ -1,0 +1,63 @@
+---
+title: "配置 MCP 连接"
+description: "通过 MCP 协议将 AgentZ 连接到外部系统"
+---
+
+## 什么是 MCP
+
+MCP（Model Context Protocol）是 AgentZ 连接外部系统的标准协议。通过 MCP，助手可以安全地操作 ERP、CRM、数据库、钉钉等任意外部服务。
+
+## 连接类型
+
+| 类型 | 传输方式 | 适用场景 |
+| :--- | :--- | :--- |
+| STDIO | 标准输入输出 | 本地命令行工具、脚本 |
+| HTTP | REST API | 远程 Web 服务 |
+| SSE | Server-Sent Events | 需要实时推送的服务 |
+
+## 配置步骤
+
+### 1. 添加 MCP 服务
+
+进入「设置 → MCP 工具」，点击「添加连接」。
+
+### 2. 填写连接信息
+
+**STDIO 类型示例：**
+
+```json
+{
+  "name": "internal-erp",
+  "type": "stdio",
+  "command": "node",
+  "args": ["./mcp-servers/erp-connector/index.js"],
+  "env": {
+    "ERP_API_KEY": "your-api-key"
+  }
+}
+```
+
+**HTTP 类型示例：**
+
+```json
+{
+  "name": "crm-service",
+  "type": "http",
+  "url": "https://crm-api.internal.company.com/mcp",
+  "headers": {
+    "Authorization": "Bearer ${CRM_TOKEN}"
+  }
+}
+```
+
+### 3. 测试连接
+
+配置完成后点击「测试」，确认连接正常后保存。
+
+### 4. 授权给助手
+
+在助手的技能面板中勾选该 MCP 工具，助手即可调用。
+
+<Warning>
+MCP 连接的凭证信息（API Key、Token 等）仅对配置者可见，共享助手时不会泄露凭证。
+</Warning>

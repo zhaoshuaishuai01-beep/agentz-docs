@@ -1,0 +1,74 @@
+---
+title: "技能 SDK"
+description: "使用 SDK 开发和测试自定义技能"
+---
+
+## 安装
+
+```bash
+npm install @agentz/skill-sdk
+```
+
+## 快速开始
+
+```javascript
+const { defineSkill } = require('@agentz/skill-sdk');
+
+module.exports = defineSkill({
+  name: 'inventory-alert',
+  version: '1.0.0',
+  description: '库存低于阈值时发送告警',
+
+  inputs: {
+    threshold: { type: 'number', default: 100, description: '告警阈值' }
+  },
+
+  async execute({ threshold }, context) {
+    const inventory = await context.mcp.call('erp', 'getInventory');
+
+    const alerts = inventory.filter(item => item.quantity < threshold);
+
+    if (alerts.length > 0) {
+      return {
+        status: 'alert',
+        message: `${alerts.length} 个 SKU 库存低于 ${threshold}`,
+        details: alerts
+      };
+    }
+
+    return { status: 'ok', message: '库存正常' };
+  }
+});
+```
+
+## 本地测试
+
+```bash
+# 运行单元测试
+npx agentz-skill test ./my-skill
+
+# 带 mock 数据测试
+npx agentz-skill test ./my-skill --mock ./test-data.json
+
+# 交互式调试
+npx agentz-skill dev ./my-skill
+```
+
+## SDK API
+
+### context 对象
+
+| 属性 | 说明 |
+| :--- | :--- |
+| `context.mcp.call(tool, method, params)` | 调用 MCP 工具 |
+| `context.log(message)` | 写入执行日志 |
+| `context.store.get(key)` | 读取持久化数据 |
+| `context.store.set(key, value)` | 写入持久化数据 |
+| `context.notify(target, message)` | 发送通知 |
+
+## 发布
+
+```bash
+# 打包并上传到 AgentZ 技能市场
+npx agentz-skill publish ./my-skill
+```

@@ -1,0 +1,67 @@
+---
+title: "自建技能"
+description: "通过 skill.yaml 和入口脚本创建自定义技能"
+---
+
+## 最小技能结构
+
+一个技能最少需要两个文件：
+
+```
+my-skill/
+├── skill.yaml      ← 技能描述文件
+└── index.js        ← 入口脚本
+```
+
+## skill.yaml 示例
+
+```yaml
+name: tag-product
+version: 1.0.0
+description: 根据商品属性自动打标签
+author: your-name
+
+inputs:
+  - name: product_name
+    type: string
+    required: true
+    description: 商品名称
+  - name: category
+    type: string
+    required: false
+    description: 商品品类
+
+outputs:
+  - name: tags
+    type: array
+    description: 生成的标签列表
+```
+
+## 入口脚本示例
+
+```javascript
+module.exports = async function({ product_name, category }) {
+  // 你的业务逻辑
+  const tags = [];
+
+  if (product_name.includes('有机')) {
+    tags.push('有机认证');
+  }
+  if (category === '母婴') {
+    tags.push('母婴优选');
+  }
+
+  return { tags };
+};
+```
+
+## 本地调试
+
+```bash
+# 使用 AgentZ CLI 在本地测试技能
+agentz skill test ./my-skill --input '{"product_name": "有机纯牛奶", "category": "母婴"}'
+```
+
+## 发布
+
+调试通过后，通过 Git URL 或 ZIP 上传的方式导入到 AgentZ 平台即可。

@@ -1,0 +1,43 @@
+---
+title: "API 概览"
+description: "AgentZ 开发者 API 入门指南"
+---
+
+## 概述
+
+AgentZ 提供 RESTful API，允许开发者以编程方式管理助手、触发任务、查询结果。
+
+## Base URL
+
+```
+https://api.agentz.dev/v1
+```
+
+## 认证方式
+
+所有 API 请求需要在 Header 中携带 API Key：
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     https://api.agentz.dev/v1/assistants
+```
+
+详见 [认证](/developers/authentication)。
+
+## 核心端点
+
+| 方法 | 路径 | 说明 |
+| :--- | :--- | :--- |
+| GET | `/assistants` | 列出所有助手 |
+| POST | `/assistants` | 创建助手 |
+| POST | `/assistants/{id}/run` | 触发助手执行 |
+| GET | `/tasks/{id}` | 查询任务状态 |
+| GET | `/tasks/{id}/output` | 获取任务输出 |
+
+## 速率限制
+
+- 免费版：60 次/分钟
+- 专业版：600 次/分钟
+- 企业版：自定义
+
+超出限制返回 `429 Too Many Requests`。

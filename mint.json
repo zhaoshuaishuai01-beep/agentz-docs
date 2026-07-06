@@ -1,0 +1,100 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "venus",
+  "name": "AgentZ",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#2A5BFF",
+    "light": "#00C2A8",
+    "dark": "#1846E6"
+  },
+  "topbarLinks": [
+    {
+      "name": "官网",
+      "url": "https://agentz.dev"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "免费试用",
+    "url": "https://agentz.dev"
+  },
+  "tabs": [
+    {
+      "name": "使用指南",
+      "url": "guides"
+    },
+    {
+      "name": "开发者",
+      "url": "developers"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "开始使用",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "core-concepts"
+      ]
+    },
+    {
+      "group": "AI 助手",
+      "pages": [
+        "guides/create-assistant",
+        "guides/configure-prompt",
+        "guides/team-sharing"
+      ]
+    },
+    {
+      "group": "技能",
+      "pages": [
+        "guides/skills-overview",
+        "guides/import-skills",
+        "guides/build-custom-skill"
+      ]
+    },
+    {
+      "group": "外部工具 (MCP)",
+      "pages": [
+        "guides/mcp-connection",
+        "guides/mcp-permissions"
+      ]
+    },
+    {
+      "group": "定时任务",
+      "pages": [
+        "guides/create-scheduled-task",
+        "guides/retry-strategy"
+      ]
+    },
+    {
+      "group": "Agent Space",
+      "pages": [
+        "guides/monitoring",
+        "guides/audit-log"
+      ]
+    },
+    {
+      "group": "设置",
+      "pages": [
+        "guides/personal-settings",
+        "guides/model-routing"
+      ]
+    },
+    {
+      "group": "开发者",
+      "pages": [
+        "developers/api-overview",
+        "developers/authentication",
+        "developers/skill-sdk"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/zhaoshuaishuai01-beep/huboagentzcode"
+  }
+}
